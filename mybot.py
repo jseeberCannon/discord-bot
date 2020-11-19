@@ -1,9 +1,16 @@
 import random
 import math
 from discord.ext.commands import Bot
+import discord
+import json
 
-BOT_PREFIX = ("?")
-TOKEN = 'Nzc1MzU3NTYxNzkxNTc4MTMy.X6lKAA.t0aRqmqkWe6sm-dDppp9riFvWfo'
+with open('config.json') as f:
+    config = json.load(f)
+prefix = config['prefix']
+token = config['token']
+
+#BOT_PREFIX = ("?")
+#TOKEN = ''
 
 client = Bot(command_prefix=BOT_PREFIX)
 
